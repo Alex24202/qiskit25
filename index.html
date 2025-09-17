@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Qiskit Fall Fest 2025: Escuela Superior Politecnica del Chimborazo(ESPOCH)</title>
+  <meta name="description" content="Qiskit Fall Fest: talleres, hackathons y charlas sobre computación cuántica. Únete a nosotros." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Simple CSS (puedes separar en styles.css) -->
+  <style>
+    :root{
+      --accent:#4f46e5;    /* morado estilo qiskit-ish */
+      --muted:#6b7280;
+      --bg:#0f172a;
+      --card:#0b1220;
+      --glass: rgba(255,255,255,0.04);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background: linear-gradient(180deg,#020617 0%, #07102a 100%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    header{
+      max-width:1100px;
+      margin:24px auto;
+      padding:18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .logo{
+      width:48px;height:48px;border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),#06b6d4);
+      display:flex;align-items:center;justify-content:center;font-weight:800;color:white;
+      box-shadow:0 6px 20px rgba(79,70,229,0.18);
+    }
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{color:#fff}
+
+    .hero{
+      max-width:1100px;
+      margin:18px auto;
+      padding:32px;
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:28px;
+      align-items:center;
+    }
+    .hero-card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border-radius:14px;
+      padding:28px;
+      box-shadow:0 10px 30px rgba(2,6,23,0.6);
+      backdrop-filter: blur(6px);
+    }
+    h1{margin:0 0 12px 0;font-size:28px;letter-spacing:-0.6px}
+    p.lead{color:var(--muted);margin:0 0 18px 0}
+
+    .cta-row{display:flex;gap:12px;margin-top:18px}
+    .btn{
+      padding:10px 16px;border-radius:10px;border:0;font-weight:700;cursor:pointer;
+      background:var(--accent); color:white;box-shadow:0 8px 20px rgba(79,70,229,0.18)
+    }
+    .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.06)}
+
+    .info{
+      display:flex;
+      gap:12px;
+      margin-top:18px;
+      flex-wrap:wrap;
+    }
+    .pill{
+      background:var(--glass);
+      padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600;font-size:13px
+    }
+
+    /* right column */
+    .aside{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      padding:18px;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,0.6);
+    }
+    .countdown{font-size:20px;font-weight:800;margin-bottom:8px}
+    .small{color:var(--muted);font-size:14px;margin-bottom:10px}
+
+    /* grid sections */
+    .container{max-width:1100px;margin:28px auto;padding:0 18px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+    .card{
+      background:rgba(255,255,255,0.02);padding:16px;border-radius:12px;
+      min-height:120px;
+    }
+    .speakers{display:flex;gap:12px;flex-wrap:wrap}
+    .speaker{display:flex;gap:12px;align-items:center}
+    .avatar{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#06b6d4,#8b5cf6);display:inline-flex;align-items:center;justify-content:center;font-weight:700;color:#041022}
+
+    footer{max-width:1100px;margin:40px auto;color:var(--muted);padding:18px;text-align:center;font-size:14px}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr; padding:18px}
+      .grid-3{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div><img src="Qiskit logo.png" style=" width: 80px; height: auto;"></div>
+      <div>
+        <div style="font-weight:800">Qiskit Fall Fest 2025 ESPOCH</div>
+        <div style="font-size:13px;color:var(--muted)">Faculty of Sciences · November 2025</div>
+      </div>
+    </div>
+
+    <nav aria-label="Main navigation">
+      <a href="#programa">Program</a>
+      <a href="#oradores">IBM Speaker</a>
+      <a href="#registro">Registration</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Qiskit Fall Fest 2025 · Escuela Superior Politecnica del Chimborazo[ESPOCH]</h1>
+        <p class="lead">
+          Join us for a day dedicated to quantum computing, featuring workshops, challenges, and talks. 
+          From beginner-friendly introductions to advanced hackathons, participants will explore the principles 
+          of quantum mechanics, apply Qiskit in practice, and engage with the future of computing.
+        </p>
+
+        <div class="info">
+          <div class="pill">Date: 18 Nov 2025</div>
+          <div class="pill">Place: Science Auditorium</div>
+          <div class="pill">Format: Hybrid</div>
+        </div>
+
+        <div class="cta-row">
+          <button class="btn" id="registrarBtn">Register here</button>
+          <button class="btn ghost" onclick="location.href='#programa'">Consult the program</button>
+        </div>
+
+        <div style="margin-top:20px;color:var(--muted);font-size:14px">
+          <strong>Are you new?</strong> Don't worry, we have Qiskit sessions and challenges for all levels. Bring your laptop.
+        </div>
+      </div>
+
+      <aside class="aside">
+        <div class="countdown" id="countdown">--- Days</div>
+        <div class="small">Countdown to the event</div>
+
+        <div style="margin-top:12px">
+          <div style="font-size:13px;color:var(--muted)">Hackathon · Workshops · Talks</div>
+          <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+            <div class="pill">Certificates</div>
+            <div class="pill">Practices with Qiskit</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <a href="#registro" class="btn" style="width:100%;display:inline-block;text-align:center">Go to Registration</a>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Programa -->
+    <section id="programa" class="container" aria-labelledby="programa-title">
+      <h2 id="programa-title" style="margin:0;color:#fff">Program</h2>
+      <p style="color:var(--muted);margin-top:6px">Programs of the Days.</p>
+
+      <div class="grid-3" style="margin-top:12px">
+        <div class="card">
+          <h3 style="margin-top:0">DAY 1 - Register</h3>
+          <p style="color:var(--muted)">Welcome to all participants.</p>
+        </div>
+
+        <div class="card">
+          <h3>DAY 1</h3>
+          <p style="color:var(--muted)">Introductory Workshop on Quantum Computing: Entanglement, Bell’s Inequalities, Quantum Gates, Quantum Circuits, ...</p>
+        </div>
+
+        <div class="card">
+          <h3>DAY 1</h3>
+          <p style="color:var(--muted)">Presentation: The Future of Quantum Computing (Historical Origins, Current Global Status and Future Perspectives)</p>
+        </div>
+
+        <div class="card">
+          <h3>DAY 1</h3>
+          <p style="color:var(--muted)">Beginner’s Challenge: State Superposition, Entanglement, ...</p>
+        </div>
+
+        <div class="card">
+          <h3>DAY 2</h3>
+          <p style="color:var(--muted)">Introduction Session.</p>
+        </div>
+
+        <div class="card">
+          <h3>DAY 2</h3>
+          <p style="color:var(--muted)">Guest Speaker from IBM.</p>
+        </div>
+
+                <div class="card">
+          <h3>DAY 2</h3>
+          <p style="color:var(--muted)">Hackathon Kick-off.</p>
+        </div>
+
+        <div class="card">
+          <h3>DAY 3</h3>
+          <p style="color:var(--muted)">Hackathon Conclusion.</p>
+        </div>
+
+        <div class="card">
+          <h3>DAY 3</h3>
+          <p style="color:var(--muted)">Project Presentations.</p>
+        </div>
+
+        <div class="card">
+          <h3>DAY 3</h3>
+          <p style="color:var(--muted)">Winner Announcement.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Oradores -->
+    <section id="oradores" class="container" style="margin-top:24px">
+      <h2 style="margin:0;color:#fff">Speakers </h2>
+      <p style="color:var(--muted);margin-top:6px">Guest Experts and Student Mentors.</p>
+
+      <div class="speakers" style="margin-top:12px">
+        <div class="speaker card" style="display:flex;align-items:center">
+          <div class="avatar">-</div>
+          <div>
+            <div style="font-weight:700">---</div>
+            <div style="color:var(--muted);font-size:13px">Quantum computing researcher · IBM Quantum</div>
+          </div>
+        </div>
+
+        <div class="speaker card" style="display:flex;align-items:center">
+          <div class="avatar">-</div>
+          <div>
+            <div style="font-weight:700">--- </div>
+            <div style="color:var(--muted);font-size:13px">Qiskit Instructor · Graduated Physicist</div>
+          </div>
+        </div>
+
+        <div class="speaker card" style="display:flex;align-items:center">
+          <div class="avatar">-</div>
+          <div>
+            <div style="font-weight:700">---</div>
+            <div style="color:var(--muted);font-size:13px">Hackathon Mentor</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registro -->
+    <section id="registro" class="container" style="margin-top:24px">
+      <h2 style="margin:0;color:#fff">Register</h2>
+     <a href="https://forms.gle/T1gLjFnwZMQ73xLr6" 
+          target="_blank" 
+          style="display:inline-block;
+          background-color:#45a29e;
+          color:white;
+          padding:10px 20px;
+          text-decoration:none;
+          border-radius:5px;
+          font-weight:bold;
+          margin-top:6px;">
+          Fill out the form to reserve your spot
+      </a>
+
+
+    </section>
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> Qiskit Fall Fest · [Tu Universidad]. Inspirado en eventos previos del Qiskit Fall Fest. <br>
+    <small style="color:var(--muted)">Visita la comunidad Qiskit para recursos, notebooks y más.</small>
+  </footer>
+
+  <!-- Minimal JS: countdown, registro falso -->
+  <script>
+    // Año en footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Countdown: ajusta la fecha del evento aquí
+    const eventDate = new Date('2025-10-18T09:00:00'); // <--- cambia fecha si necesitas
+    function updateCountdown(){
+      const now = new Date();
+      const diff = eventDate - now;
+      if(diff <= 0){ document.getElementById('countdown').textContent = '¡El evento ya empezó!'; return; }
+      const days = Math.floor(diff / (1000*60*60*24));
+      const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+      const mins = Math.floor((diff % (1000*60*60)) / (1000*60));
+      document.getElementById('countdown').textContent = `${days}d ${hours}h ${mins}m`;
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+
+    // Registro (simulado): en producción conecta a backend o Google Forms / Airtable
+    document.getElementById('regForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const data = {
+        name: fd.get('name'),
+        email: fd.get('email'),
+        level: fd.get('level')
+      };
+      // Para demo: guardamos en localStorage y mostramos confirmación
+      const regs = JSON.parse(localStorage.getItem('qf_regs')||'[]');
+      regs.push(data);
+      localStorage.setItem('qf_regs', JSON.stringify(regs));
+      alert('Registro recibido. Te confirmaremos por correo.');
+      e.target.reset();
+    });
+
+    // Botón principal de registro
+    document.getElementById('registrarBtn').addEventListener('click', ()=> location.href = '#registro');
+  </script>
+</body>
+</html>
