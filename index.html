@@ -6,13 +6,12 @@
   <title>Qiskit Fall Fest 2025: Escuela Superior Politecnica del Chimborazo(ESPOCH)</title>
   <meta name="description" content="Qiskit Fall Fest: talleres, hackathons y charlas sobre computación cuántica. Únete a nosotros." />
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Simple CSS (puedes separar en styles.css) -->
+
   <style>
     :root{
-      --accent:#4f46e5;    /* morado estilo qiskit-ish */
+      --accent:#4f46e5;   
       --muted:#6b7280;
       --bg:#0f172a;
       --card:#0b1220;
@@ -88,7 +87,7 @@
       padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600;font-size:13px
     }
 
-    /* right column */
+
     .aside{
       background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
       padding:18px;border-radius:12px;
@@ -97,7 +96,7 @@
     .countdown{font-size:20px;font-weight:800;margin-bottom:8px}
     .small{color:var(--muted);font-size:14px;margin-bottom:10px}
 
-    /* grid sections */
+
     .container{max-width:1100px;margin:28px auto;padding:0 18px}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
     .card{
@@ -110,7 +109,7 @@
 
     footer{max-width:1100px;margin:40px auto;color:var(--muted);padding:18px;text-align:center;font-size:14px}
 
-    /* responsive */
+
     @media (max-width:900px){
       .hero{grid-template-columns:1fr; padding:18px}
       .grid-3{grid-template-columns:1fr}
@@ -179,7 +178,7 @@
       </aside>
     </section>
 
-    <!-- Programa -->
+
     <section id="programa" class="container" aria-labelledby="programa-title">
       <h2 id="programa-title" style="margin:0;color:#fff">Program</h2>
       <p style="color:var(--muted);margin-top:6px">Programs of the Days.</p>
@@ -294,13 +293,13 @@
     © <span id="year"></span> Qiskit Fall Fest · [ESPOCH] <br>
   </footer>
 
-  <!-- Minimal JS: countdown, registro falso -->
+
   <script>
-    // Año en footer
+  
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Countdown: ajusta la fecha del evento aquí
-    const eventDate = new Date('2025-10-18T09:00:00'); // <--- cambia fecha si necesitas
+
+    const eventDate = new Date('2025-11-05T09:00:00'); 
     function updateCountdown(){
       const now = new Date();
       const diff = eventDate - now;
@@ -313,7 +312,7 @@
     updateCountdown();
     setInterval(updateCountdown, 60000);
 
-    // Registro (simulado): en producción conecta a backend o Google Forms / Airtable
+ 
     document.getElementById('regForm').addEventListener('submit', function(e){
       e.preventDefault();
       const fd = new FormData(e.target);
@@ -322,7 +321,7 @@
         email: fd.get('email'),
         level: fd.get('level')
       };
-      // Para demo: guardamos en localStorage y mostramos confirmación
+
       const regs = JSON.parse(localStorage.getItem('qf_regs')||'[]');
       regs.push(data);
       localStorage.setItem('qf_regs', JSON.stringify(regs));
@@ -330,9 +329,10 @@
       e.target.reset();
     });
 
-    // Botón principal de registro
+
     document.getElementById('registrarBtn').addEventListener('click', ()=> location.href = '#registro');
   </script>
 </body>
 </html>
+
 
