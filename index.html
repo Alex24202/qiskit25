@@ -34,19 +34,32 @@
       padding:18px;
       display:flex;
       align-items:center;
-      justify-content:space-between;
+      justify-content:center; /* <-- Centrado */
+      flex-direction: column; /* Logos + texto uno debajo del otro */
+      text-align: center;
     }
+
     .brand{
       display:flex;
-      gap:12px;
+      gap:20px; 
       align-items:center;
+      justify-content:center;
+      margin-bottom:10px;
     }
-    .logo{
-      width:48px;height:48px;border-radius:10px;
-      background:linear-gradient(135deg,var(--accent),#06b6d4);
-      display:flex;align-items:center;justify-content:center;font-weight:800;color:white;
-      box-shadow:0 6px 20px rgba(79,70,229,0.18);
+    .logo-img{
+      height: 80px; 
+      width: auto;
+      border-radius: 14px;                 
+      padding: 8px;                      
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    /*efecto logos */
+    .logo-img:hover{
+      transform: scale(1.05);      
+      box-shadow: 0 10px 28px rgba(79,70,229,0.5);
+    }
+
     nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
     nav a:hover{color:#fff}
 
@@ -90,9 +103,21 @@
 
     .aside{
       background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
-      padding:18px;border-radius:12px;
-      box-shadow:0 8px 24px rgba(2,6,23,0.6);
+      padding:24px;             
+      border-radius:14px;
+      box-shadow:0 10px 28px rgba(2,6,23,0.6);
+      max-width: 800px;           
+      margin: 0 auto;            
     }
+
+    .banner-img {
+      width: 100%;        /* ocupa todo el ancho del aside */
+      max-width: 750px;   /* límite de ancho mayor */
+      height: auto;       /* mantiene proporción */
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+
     .countdown{font-size:20px;font-weight:800;margin-bottom:8px}
     .small{color:var(--muted);font-size:14px;margin-bottom:10px}
 
@@ -120,18 +145,19 @@
 
   <header>
     <div class="brand">
-      <div><img src="Qiskit logo.png" style=" width: 80px; height: auto;"></div>
-      <div>
-        <div style="font-weight:800">Qiskit Fall Fest 2025 ESPOCH</div>
-        <div style="font-size:13px;color:var(--muted)">Faculty of Sciences · November 2025</div>
-      </div>
+      <div><img class="logo-img" src="Logo.png" style=" width: 130px; height: auto;"></div>
+      <div><img class="logo-img" src="EspochFin.png" style="width: 200px; height: auto"></div>
     </div>
-
-    <nav aria-label="Main navigation">
+    <div>
+      <div style="font-size:25px; font-weight:800">Qiskit Fall Fest 2025 ESPOCH</div>
+      <div style="font-size:15px;color:var(--muted)">Faculty of Sciences · November 2025</div>
+    </div>
+    <div style="height: 20px;"></div>
+    <nav aria-label="Main navigation"><h2>
       <a href="#programa">Program</a>
       <a href="#oradores">IBM Speaker</a>
       <a href="#registro">Registration</a>
-    </nav>
+    </nav></h2>
   </header>
 
   <main>
@@ -151,18 +177,20 @@
         </div>
 
         <div class="cta-row">
-          <button class="btn" id="registrarBtn">Register here</button>
+          <button class="btn" onclick="location.href='#registro'" id="registrarBtn">Register here</button>
           <button class="btn ghost" onclick="location.href='#programa'">Consult the program</button>
+          <button class="btn ghost" onclick="location.href='#oradores'">Speakers</button>
         </div>
 
         <div style="margin-top:20px;color:var(--muted);font-size:14px">
           <strong>Are you new?</strong> Don't worry, we have Qiskit sessions and challenges for all levels. Bring your laptop.
         </div>
       </div>
-
       <aside class="aside">
-        <div class="countdown" id="countdown">--- Days</div>
-        <div class="small">Countdown to the event</div>
+        <!-- Imagen horizontal en lugar de countdown -->
+        <div style="margin-bottom:14px; text-align:center;">
+          <img src="100QF.png" alt="Quantum Event Banner" class="banner-img">
+        </div>
 
         <div style="margin-top:12px">
           <div style="font-size:13px;color:var(--muted)">Hackathon · Workshops · Talks</div>
@@ -176,6 +204,7 @@
           <a href="#registro" class="btn" style="width:100%;display:inline-block;text-align:center">Go to Registration</a>
         </div>
       </aside>
+
     </section>
 
 
@@ -334,5 +363,3 @@
   </script>
 </body>
 </html>
-
-
