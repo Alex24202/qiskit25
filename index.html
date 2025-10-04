@@ -3,156 +3,33 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Qiskit Fall Fest 2025: Escuela Superior Politecnica del Chimborazo(ESPOCH)</title>
-  <meta name="description" content="Qiskit Fall Fest: talleres, hackathons y charlas sobre computación cuántica. Únete a nosotros." />
+  <title>Qiskit Fall Fest 2025:ESPOCH</title>
+  <meta name="description" content="charlas sobre computación cuántica" />
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-
-
-  <style>
-    :root{
-      --accent:#4f46e5;   
-      --muted:#6b7280;
-      --bg:#0f172a;
-      --card:#0b1220;
-      --glass: rgba(255,255,255,0.04);
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
-      background: linear-gradient(180deg,#020617 0%, #07102a 100%);
-      color:#e6eef8;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-    }
-
-    header{
-      max-width:1100px;
-      margin:24px auto;
-      padding:18px;
-      display:flex;
-      align-items:center;
-      justify-content:center; /* <-- Centrado */
-      flex-direction: column; /* Logos + texto uno debajo del otro */
-      text-align: center;
-    }
-
-    .brand{
-      display:flex;
-      gap:20px; 
-      align-items:center;
-      justify-content:center;
-      margin-bottom:10px;
-    }
-    .logo-img{
-      height: 80px; 
-      width: auto;
-      border-radius: 14px;                 
-      padding: 8px;                      
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    /*efecto logos */
-    .logo-img:hover{
-      transform: scale(1.05);      
-      box-shadow: 0 10px 28px rgba(79,70,229,0.5);
-    }
-
-    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
-    nav a:hover{color:#fff}
-
-    .hero{
-      max-width:1100px;
-      margin:18px auto;
-      padding:32px;
-      display:grid;
-      grid-template-columns:1fr 420px;
-      gap:28px;
-      align-items:center;
-    }
-    .hero-card{
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
-      border-radius:14px;
-      padding:28px;
-      box-shadow:0 10px 30px rgba(2,6,23,0.6);
-      backdrop-filter: blur(6px);
-    }
-    h1{margin:0 0 12px 0;font-size:28px;letter-spacing:-0.6px}
-    p.lead{color:var(--muted);margin:0 0 18px 0}
-
-    .cta-row{display:flex;gap:12px;margin-top:18px}
-    .btn{
-      padding:10px 16px;border-radius:10px;border:0;font-weight:700;cursor:pointer;
-      background:var(--accent); color:white;box-shadow:0 8px 20px rgba(79,70,229,0.18)
-    }
-    .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.06)}
-
-    .info{
-      display:flex;
-      gap:12px;
-      margin-top:18px;
-      flex-wrap:wrap;
-    }
-    .pill{
-      background:var(--glass);
-      padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600;font-size:13px
-    }
-
-
-    .aside{
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
-      padding:24px;             
-      border-radius:14px;
-      box-shadow:0 10px 28px rgba(2,6,23,0.6);
-      max-width: 800px;           
-      margin: 0 auto;            
-    }
-
-    .banner-img {
-      width: 100%;        /* ocupa todo el ancho del aside */
-      max-width: 750px;   /* límite de ancho mayor */
-      height: auto;       /* mantiene proporción */
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-    }
-
-    .countdown{font-size:20px;font-weight:800;margin-bottom:8px}
-    .small{color:var(--muted);font-size:14px;margin-bottom:10px}
-
-
-    .container{max-width:1100px;margin:28px auto;padding:0 18px}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
-    .card{
-      background:rgba(255,255,255,0.02);padding:16px;border-radius:12px;
-      min-height:120px;
-    }
-    .speakers{display:flex;gap:12px;flex-wrap:wrap}
-    .speaker{display:flex;gap:12px;align-items:center}
-    .avatar{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#06b6d4,#8b5cf6);display:inline-flex;align-items:center;justify-content:center;font-weight:700;color:#041022}
-
-    footer{max-width:1100px;margin:40px auto;color:var(--muted);padding:18px;text-align:center;font-size:14px}
-
-
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr; padding:18px}
-      .grid-3{grid-template-columns:1fr}
-    }
-  </style>
+  <link rel="stylesheet" href="stilo.css">
 </head>
 <body>
 
   <header>
-    <div class="brand">
-      <div><img class="logo-img" src="Logo.png" style=" width: 130px; height: auto;"></div>
-      <div><img class="logo-img" src="EspochFin.png" style="width: 200px; height: auto"></div>
+    <div class="first">
+      <img class="IBM" src="IBM.png" alt="IMB logo">
     </div>
-    <div>
-      <div style="font-size:25px; font-weight:800">Qiskit Fall Fest 2025 ESPOCH</div>
-      <div style="font-size:15px;color:var(--muted)">Faculty of Sciences · 05-07 November 2025</div>
+    
+    <div class="header-inner">
+
+      <div class="logoIn">
+        <img class="logo-img" src="Logo.png" alt="Qiskit Logo">
+        <img class="logo-img" src="EspochFin.png" alt="ESPOCH Logo">
+      </div>
+
+
+      <div class="header-text">
+        <h1>Qiskit Fall Fest 2025 ESPOCH</h1>
+         <p>Faculty of Sciences · 05-07 November 2025</p>
+      </div>
     </div>
-    <div style="height: 20px;"></div>
+
     <nav aria-label="Main navigation"><h2>
       <a href="#programa">Program</a>
       <a href="#oradores">IBM Speaker</a>
@@ -191,7 +68,7 @@
         
       </div>
       <aside class="aside">
-        <!-- Imagen horizontal en lugar de countdown -->
+
         <div style="margin-bottom:14px; text-align:center;">
           <img src="100QF.png" alt="Quantum Event Banner" class="banner-img">
         </div>
@@ -212,11 +89,12 @@
     </section>
 
 
-    <section id="programa" class="container" aria-labelledby="programa-title">
-      <h2 id="programa-title" style="margin:0;color:#fff">Program</h2>
-      <p style="color:var(--muted);margin-top:6px">Programs of the Days.</p>
+    <section id="programa" class="container1" aria-labelledby="programa-title">
 
-      <div class="grid-3" style="margin-top:12px">
+      <h2 id="programa-title" style="align-items: center;">Program</h2>
+      <p>Programs of the Days.</p>
+
+      <div class="grid-3" style="margin-top:12px"; backgroudn-image: url="fondo.png";>
         <div class="card">
           <h3 style="margin-top:0">DAY 1 - Register</h3>
           <p style="color:var(--muted)">Welcome to all participants.</p>
@@ -274,8 +152,9 @@
       <p style="color:var(--muted);margin-top:6px">Guest Experts and Student Mentors.</p>
 
       <div class="speakers" style="margin-top:12px">
+
         <div class="speaker card" style="display:flex;align-items:center">
-          <div class="avatar">-</div>
+          <img class="avatar" src="Speaker.jpg">
           <div>
             <div style="font-weight:700">TO BE CONFIRMED</div>
             <div style="color:var(--muted);font-size:13px">Quantum computing researcher · IBM Quantum</div>
@@ -291,9 +170,9 @@
         </div>
 
         <div class="speaker card" style="display:flex;align-items:center">
-          <div class="avatar">-</div>
+          <img class="avatar" src="Jiri.jpg">
           <div>
-            <div style="font-weight:700">---</div>
+            <div style="font-weight:700">PhD. Jirí Svozilík</div>
             <div style="color:var(--muted);font-size:13px">Hackathon Mentor</div>
           </div>
         </div>
@@ -319,51 +198,26 @@
 
     </section>
 
+    <section id="organizadores" class="container organizers-section">
+      <h2>Organizers</h2>
+      <div class="organizers">
+        <div class="organizer">
+          <img src="César.jpg" alt="Organizer 1">
+          <p><strong>Student César Matailo</strong><br>Rol</p>
+        </div>
+        <div class="organizer">
+          <img src="Jiri.jpg" alt="Organizer 2">
+          <p><strong>PhD. Jirí Svozilík</strong><br>Co-Organizer</p>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
     © <span id="year"></span> Qiskit Fall Fest · [ESPOCH] <br>
   </footer>
 
-
-  <script>
-  
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-
-    const eventDate = new Date('2025-11-05T09:00:00'); 
-    function updateCountdown(){
-      const now = new Date();
-      const diff = eventDate - now;
-      if(diff <= 0){ document.getElementById('countdown').textContent = '¡El evento ya empezó!'; return; }
-      const days = Math.floor(diff / (1000*60*60*24));
-      const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-      const mins = Math.floor((diff % (1000*60*60)) / (1000*60));
-      document.getElementById('countdown').textContent = `${days}d ${hours}h ${mins}m`;
-    }
-    updateCountdown();
-    setInterval(updateCountdown, 60000);
-
- 
-    document.getElementById('regForm').addEventListener('submit', function(e){
-      e.preventDefault();
-      const fd = new FormData(e.target);
-      const data = {
-        name: fd.get('name'),
-        email: fd.get('email'),
-        level: fd.get('level')
-      };
-
-      const regs = JSON.parse(localStorage.getItem('qf_regs')||'[]');
-      regs.push(data);
-      localStorage.setItem('qf_regs', JSON.stringify(regs));
-      alert('Registro recibido. Te confirmaremos por correo.');
-      e.target.reset();
-    });
-
-
-    document.getElementById('registrarBtn').addEventListener('click', ()=> location.href = '#registro');
-  </script>
 
 </body>
 </html>
